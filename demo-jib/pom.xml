@@ -72,6 +72,9 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>${jib.maven.version}</version>
                 <configuration>
+                    <container>
+                        <user>nobody</user>
+                    </container>
                     <from>
                         <image>eclipse-temurin:19-jdk-jammy@sha256:263d86d2b3ee21b8c6e66fa9739e72d22965389b8429e68d742593c7bdedb4cb</image>
                         <platforms>
