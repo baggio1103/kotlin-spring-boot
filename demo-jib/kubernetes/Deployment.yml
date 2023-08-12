@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: items
+  labels:
+    app: items
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: items
+      labels:
+        app: items
+    spec:
+      containers:
+        - name: items
+          image: baggio1103/demo-jib:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: items
