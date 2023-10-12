@@ -19,8 +19,8 @@
         <kotlin.version>1.8.22</kotlin.version>
 
         <db.url>jdbc:postgresql://localhost:5432/jooq-demo</db.url>
-        <db.username>postgres</db.username>
-        <db.password>postgres</db.password>
+        <db.username>qwerty123</db.username>
+        <db.password>qwerty123</db.password>
 
         <testcontainers.version>1.18.3</testcontainers.version>
         <testcontainers-jooq-codegen-maven-plugin.version>0.0.2</testcontainers-jooq-codegen-maven-plugin.version>
@@ -190,9 +190,9 @@
                 <!-- This is a minimal working configuration. See the manual's section about the code generator for more details -->
                 <configuration>
                     <jdbc>
-                        <url>jdbc:postgresql://localhost:5432/jooq-demo</url>
-                        <user>qwerty123</user>
-                        <password>qwerty123</password>
+                        <url>${db.url}</url>
+                        <user>${db.username}</user>
+                        <password>${db.password}</password>
                     </jdbc>
                     <generator>
                         <database>

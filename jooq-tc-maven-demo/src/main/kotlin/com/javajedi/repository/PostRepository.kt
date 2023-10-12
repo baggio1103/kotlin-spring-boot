@@ -14,7 +14,6 @@ class PostRepository(
     private val dslContext: DSLContext
 ) {
 
-
     fun getPostById(id: Long): Post {
         return dslContext.select(
             POSTS.ID,
