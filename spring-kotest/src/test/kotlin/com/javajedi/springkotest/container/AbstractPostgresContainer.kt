@@ -15,7 +15,6 @@ abstract class AbstractPostgresContainer {
             registry.add("spring.datasource.url") { POSTGRES_CONTAINER.jdbcUrl }
             registry.add("spring.datasource.password") { POSTGRES_CONTAINER.password }
             registry.add("spring.datasource.username") { POSTGRES_CONTAINER.username }
-            println("INFOOO")
         }
 
     }
