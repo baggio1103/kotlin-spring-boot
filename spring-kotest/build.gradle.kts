@@ -30,6 +30,12 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-testcontainers")
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
+
+    // kotest
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:5.8.0")
+    testImplementation("io.kotest:kotest-assertions-core-jvm:5.8.0")
+    testImplementation("io.kotest.extensions:kotest-extensions-spring:1.1.3")
+    implementation("io.kotest.extensions:kotest-extensions-testcontainers:2.0.2")
     // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
     testImplementation("io.rest-assured:rest-assured:5.4.0")
 }
