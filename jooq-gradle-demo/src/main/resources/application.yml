@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jooq-demo
+    password: postgres
+    username: postgres
+logging:
+  level:
+    org.jooq: debug
