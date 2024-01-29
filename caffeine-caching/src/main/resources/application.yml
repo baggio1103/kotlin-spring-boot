@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: caffeine-caching
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+  observations:
+    key-values:
+      application: "${spring.application.name}"
