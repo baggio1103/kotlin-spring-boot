@@ -1,4 +1,4 @@
-package com.atomic.coding.user.service
+package com.atomic.coding.userservice
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

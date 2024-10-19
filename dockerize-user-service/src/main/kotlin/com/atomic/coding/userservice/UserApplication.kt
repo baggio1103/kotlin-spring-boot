@@ -1,4 +1,4 @@
-package com.atomic.coding.user.service
+package com.atomic.coding.userservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
