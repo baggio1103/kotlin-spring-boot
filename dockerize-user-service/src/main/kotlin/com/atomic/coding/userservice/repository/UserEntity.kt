@@ -1,17 +1,16 @@
 package com.atomic.coding.userservice.repository
 
 import com.atomic.coding.userservice.data.User
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import jakarta.persistence.*
 import java.time.LocalDateTime
 
 @Entity
 @Table(name = "users")
 data class UserEntity(
     @Id
-    val id: Int,
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq_gen")
+    @SequenceGenerator(name = "user_seq_gen", sequenceName = "users_id_seq", allocationSize = 1)
+    val id: Int? = null,
 
     @Column(name = "username")
     val username: String,
@@ -29,18 +28,18 @@ data class UserEntity(
     val lastName: String,
 
     @Column(name = "created_at")
-    val createdAt: LocalDateTime,
+    val createdAt: LocalDateTime = LocalDateTime.now(),
 
     @Column(name = "updated_at")
-    val updatedAt: LocalDateTime,
+    val updatedAt: LocalDateTime = LocalDateTime.now(),
 )
 
 fun UserEntity.toUser(): User = User(
-    id = id,
+    id = requireNotNull(id),
     username = username,
     email = email,
     firstName = firstName,
     lastName = lastName,
     createdAt = createdAt,
-    updatedAt = updatedAt
+    updatedAt = updatedAt,
 )

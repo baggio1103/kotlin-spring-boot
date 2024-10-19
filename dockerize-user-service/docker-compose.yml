@@ -11,3 +11,10 @@ services:
       - POSTGRES_DB=users
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=user-admin
+    networks:
+      - my_custom_network
+
+networks:
+  my_custom_network:
+    name: user-service-network
+    driver: bridge
