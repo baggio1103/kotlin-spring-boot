@@ -19,3 +19,21 @@ The post is available to read:
 
 ---
 This is the source code of the post published on Medium and Substack.
+
+---
+To start-up the application:
+- start the postgres instance
+- start the image created
+
+```
+# start postgres
+docker compose up -d
+```
+```
+# build docker image
+./gradlew jibDockerBuild
+```
+```
+# run docker image
+docker run -e DB_HOST=database -p 8080:8080 --network user-service-network ${yourDockerImageName}
+```
