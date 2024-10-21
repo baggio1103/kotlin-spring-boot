@@ -1,4 +1,4 @@
-package com.atomic.coding.userservice.data
+package com.atomic.coding.data
 
 import java.time.LocalDateTime
 

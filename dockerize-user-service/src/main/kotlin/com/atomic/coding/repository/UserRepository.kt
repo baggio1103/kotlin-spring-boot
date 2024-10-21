@@ -1,4 +1,4 @@
-package com.atomic.coding.userservice.repository
+package com.atomic.coding.repository
 
 import org.springframework.data.jpa.repository.JpaRepository
 

@@ -1,10 +1,10 @@
-package com.atomic.coding.userservice.controller
+package com.atomic.coding.controller
 
-import com.atomic.coding.userservice.data.User
-import com.atomic.coding.userservice.data.UserRequest
-import com.atomic.coding.userservice.repository.UserEntity
-import com.atomic.coding.userservice.repository.UserRepository
-import com.atomic.coding.userservice.repository.toUser
+import com.atomic.coding.data.User
+import com.atomic.coding.data.UserRequest
+import com.atomic.coding.repository.UserEntity
+import com.atomic.coding.repository.UserRepository
+import com.atomic.coding.repository.toUser
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.*

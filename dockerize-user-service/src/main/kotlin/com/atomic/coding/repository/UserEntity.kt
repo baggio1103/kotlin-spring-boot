@@ -1,6 +1,6 @@
-package com.atomic.coding.userservice.repository
+package com.atomic.coding.repository
 
-import com.atomic.coding.userservice.data.User
+import com.atomic.coding.data.User
 import jakarta.persistence.*
 import java.time.LocalDateTime
 
