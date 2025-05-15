@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+
+  items:
+    container_name: items
+    image: postgres:15.4-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=items
+      - POSTGRES_USER=item-service
+      - POSTGRES_PASSWORD=item-service-password
+    volumes:
+      - items-db-data:/var/lib/postgresql/data
+
+  users:
+    container_name: users
+    image: postgres:15.4-alpine
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=users
+      - POSTGRES_USER=user-service
+      - POSTGRES_PASSWORD=user-service-password
+    volumes:
+      - users-db-data:/var/lib/postgresql/data
+
+  orders:
+    container_name: orders
+    image: postgres:15.4-alpine
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=orders
+      - POSTGRES_USER=order-service
+      - POSTGRES_PASSWORD=order-service-password
+    volumes:
+      - orders-db-data:/var/lib/postgresql/data
+
+volumes:
+  orders-db-data:
+  users-db-data:
+  items-db-data:
